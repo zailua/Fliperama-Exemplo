@@ -1,0 +1,172 @@
+header {
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  display: flex;
+}
+nav {
+  display: inline-block;
+  margin: 0;
+}
+
+main h1 {
+  font-size:80px;
+  color: #777;
+  margin-top: 50px;
+
+}
+
+.logo {
+  position: absolute;
+  left: 10%;
+  width: 100%;
+  height: auto;
+  max-width: 55px;
+  
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+nav:after {
+  display: block;
+  content: '';
+  border-bottom: 3px solid var(--color2);
+  transform: scaleX(0);
+  transition: transform 425ms ease-in-out;
+}
+
+nav:hover::after {
+  transform: scaleX(1);
+}
+
+.menu {
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: var(--color1);
+  text-decoration: inherit;
+  transition: all 0.45s;
+}
+
+a:-webkit-any-link:hover {
+  color: var(--color1);
+  transition: 0.4s;
+}
+
+.active {
+  color: var(--color2);
+}
+
+#check {
+  display: none;
+}
+
+.button{
+  width: 48px;
+  height: 48px;
+  background: var(--color1);
+  padding: 12px;
+  display: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  padding-top: 10px;
+  line-height: 8px;
+  text-align: right;
+  top: 0;
+  
+}
+.button:hover{
+  background: var(--color2);
+}
+.button span{
+  height: 4px;
+  width: 100%;
+  background: white;
+  display: inline-block;
+  transition: all 0.5s cubic-bezier(.62,.43,.35,1.47);
+}
+
+
+/* toggle icon animation */
+#check:checked ~ .button span:nth-child(1){
+  width: 100%;
+  transform: rotate(45deg) translateY(7px) translateX(6px);
+}
+#check:checked ~ .button span:nth-child(2){
+  width:0;
+}
+
+#check:checked ~ .button span:nth-child(3){
+  width: 100%;
+  transform: rotate(-45deg) translateY(-1px) translateX(-1px);
+}
+
+
+@media (max-width: 852px){
+* {
+  overflow-x: hidden;
+}
+
+  .button{
+    display: block;
+    margin-bottom: 50px;
+    
+
+  }
+
+  header {
+      justify-content: flex-end;
+      margin-right: 50px;
+      
+       
+  }
+ 
+  nav:hover::after {
+    transform: scaleX(0)
+  }
+
+  ul{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    height: 50vh;
+    width: 100%;
+    top: 100px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    padding: 10px;
+  }
+  nav ul li{
+    margin: 10px 0;
+    position: flex;
+    
+   
+    
+  }
+    
+  
+    a:hover,a.active{
+    background: none;
+    color: var(--color2);
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}

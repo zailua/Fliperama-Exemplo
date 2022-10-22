@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rowdies&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Poppins&display=swap');
+
+.writer {
+
+  font-size: 3.25rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Rowdies', cursive;
+  color: var(--color1)
+
+}
+
+.writerJapanese {
+
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color: var(--color2)
+
+}

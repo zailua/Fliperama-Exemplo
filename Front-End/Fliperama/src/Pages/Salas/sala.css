@@ -1,0 +1,32 @@
+html,body {
+  color: var(--color1);
+}
+
+
+.btn-sakura {
+  background: var(--color2);
+  
+}
+
+.s {
+  max-width: 50%;
+ }
+
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} 
+
+.table-colors {
+
+  color: var(--color1);
+}
+
+.tr-hover:hover {
+  background: rgb(28,29,34);
+  background: linear-gradient(90deg, rgba(28,29,34,0) 0%, rgba(255,183,197,1) 1%, rgba(255,183,197,1) 50%, rgba(255,183,197,1) 99%, rgba(28,29,34,0) 100%);
+  transition: 0.3s;
+}
+

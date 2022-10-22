@@ -1,0 +1,82 @@
+.card1 {
+  --card-gradient: rgba(0, 0, 0, 0.8);
+  --card-gradient: #5e9ad9, #e271ad;
+  --card-blend-mode: overlay;
+
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+  padding-bottom: 1rem;
+  background-image: linear-gradient(
+    var(--card-gradient),
+    white max(9.5rem, 27vh)
+  );
+  overflow: hidden;
+}
+
+.img1 {
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 100%;
+  object-fit: cover;
+  max-height: max(10rem, 30vh);
+  aspect-ratio: 16/9;
+  mix-blend-mode: var(--card-blend-mode);
+}
+
+.main1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.main1 ul li:hover,
+.main1 ul li:focus-within {
+  --card-gradient: #f4a5b1 max(8.5rem, 20vh);
+}
+
+.card1 h3 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.card1 p {
+  text-align: center;
+}
+
+.card1 a {
+  color: inherit;
+}
+
+.card-wrapper1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min-max(100ch, 1fr));
+  grid-gap: 1.2rem;
+  max-width: 50vw;
+  width: 100ch;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 852px){
+
+
+  .card-wrapper1 {
+    display: grid;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    grid-template-columns: repeat(auto-fit, min-max(100ch, 1fr));
+    grid-gap: 1.2rem;
+    max-width: 50vw;
+    width: 200ch;
+    height: 100ch;  
+
+  }
+}
